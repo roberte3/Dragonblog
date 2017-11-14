@@ -1,0 +1,3 @@
+URL with instructions to install minkKube 
+https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/#objectives
+
