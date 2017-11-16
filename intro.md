@@ -37,7 +37,11 @@ An advantage that Dragonchain has is that is allows you to build private chains,
 Other blockchain projects, by default publish all of the data to the public networks, where anyone with a blockexplorer program can investigate and see all of your data. 
 
 ##Fixed time based blocks
-Default out of the box, Dragonchain is configured with a short interval, 5 second block (aka chunk of transactions)
+Default out of the box, Dragonchain is configured with a short interval, 5 second block (aka chunk of transactions). You can configure this for different settings if you so choose. 
+
+Ok, enough introduction, lets write some code. 
+First lets download and install Dragonchain (link)[???]
+
 
 
 
