@@ -44,8 +44,9 @@ The Transaction Service is running on Port 81
 The Processor is running on Port 8080
 And the Database (Postgres) is running on port 5432
 
+Ok, now that everything is up and running lets start using Dragonchain. 
 
 
-URL with instructions to install minkKube 
-https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/#objectives
+
+
 
