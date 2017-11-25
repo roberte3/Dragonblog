@@ -47,7 +47,11 @@ transaction.json
 }
 ````
 
-If you aren't familar with JSON, this is an array of Transactions, each transaction consists of three key-value pairs, of the sender and their email address, the numberofDragons that your sending and who received the transactions. 
+If you aren't familar with JSON, there are two sections to this file. The first is a header, and the second is the payload (aka the information you want Dragonchain to store. 
+
+The header structure is described on the Dragoncahin github site, [link](https://github.com/dragonchain/dragonchain/blob/master/docs/transactions.md). 
+
+We are more concerned about the payload section which holds an array of Transactions, each transaction consists of three key-value pairs, of the sender and their email address, the numberofDragons that your sending and who received the transactions. 
 
 So make a copy of the text above, and save it to a file on your computer. 
 
@@ -74,4 +78,10 @@ Server: TornadoServer/4.2.1
 ```
 (note the string after the transaction_id will be different everytime you post). 
 
+##Querying A Transaction 
+Dragonchain in its default configuration from the Docker image posts L1 transactions in 5 seconds. So after waiting a few moments, lets use curl to query the transaction we just posted. 
+
+```
+
+```
 ##
