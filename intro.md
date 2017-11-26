@@ -25,7 +25,7 @@ With Dragonchain, you can push the one dimensional series of blocks into stacks 
 For more information on how Dragonchain lets you build multi-dimensional blockchains look at the architecture diagram. [link](https://dragonchain.github.io/architecture#verification-and-consensus)
 
 ##Integration with web based systems
-Dragonchain is different than Bitcoin and Ethereum, it leverages your existing knowledge of web development. Your programming interface to Dragonchain is HTTP (web) calls with JSON payloads. In the later post we will go through posting and querying transactions with CURL and WGET. 
+Dragonchain is different than Bitcoin and Ethereum, it leverages your existing knowledge of web development. Your programming interface to Dragonchain is HTTP (web) calls with JSON payloads. In the later post we will go through posting and querying transactions with CURL. 
 
 Dragonchain leverages the micro services paradigm that has become a major trend in the software in the last few years and makes integration with your existing application infrastructure. It is easy to deploy via Docker and Kuberneties. (TODO URL) 
 
@@ -40,7 +40,7 @@ Other blockchain projects, by default publish all of the data to the public netw
 Default out of the box, Dragonchain is configured with a short interval, 5 second block (aka chunk of transactions). You can configure this for different settings if you so choose. 
 
 Ok, enough introduction, lets write some code. 
-First lets download and install Dragonchain (link)[???]
+First lets download and install Dragonchain (link)[docker.md]
 
 
 
