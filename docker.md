@@ -1,19 +1,19 @@
 
-#Installing Dragonchain: 
+# Installing Dragonchain: 
 
 To get started using Dragonchain, we are going use Docker to setup a simple Dragonchain node on Docker. 
 
 If you have Docker already installed on your computer this is going to take only a few minutes to get up and running. If you don't know what Docker is, it is a system that enables you build and run containerized versions of applications. Basically all of the "stuff" to run an application is inside a couple of files, and those files can run on just about any computer. 
 
-##Installing Docker 
+## Installing Docker 
 To install Docker go to [Docker.com](www.docker.com) and click "Get Docker" and select the version for the computer that you have and follow the directions on that page.  
 Mac Version [Link](https://www.docker.com/docker-mac)
 Windows Version [Link](https://www.docker.com/docker-windows)
 
-##Installing Git
+## Installing Git
 To install Git on your computer, go to the following [link](https://git-scm.com/downloads) and download the appropriate client for your machine. 
 
-##Installing Dragonchain via a Docker Image 
+## Installing Dragonchain via a Docker Image 
 The best way to install Dragonchain to Docker is run the following commands from your terminal in the directory you want to have Dragonchain installed. 
 ````
 $ git clone https://github.com/dragonchain/dragonchain.git

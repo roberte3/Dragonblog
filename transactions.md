@@ -1,10 +1,10 @@
-#Interacting with Dragonchain. 
+# Interacting with Dragonchain. 
 
 Dragonchain as we mentioned in the introduction, uses web technology at its core. And it was designed/developed by people who built the technology behind some of the highest trafficked websites on the Internet. As a result it uses many of the current web best practices in its design an implementation, which makes it easy for developers to integrate it into their existing services and sites. 
 
 The main technologies that we are going to be using in this tutorial are JSON and CURL. This also assumes you have the Docker image of Dragonchain up and running that we talked about in the previous post. 
 
-##Getting Started 
+## Getting Started 
 I'm going to assume you are running Dragonchain via the Docker Image in the last chapter. And that your docker_query_svc_1 is running on port 80 on your localhost, and your docker_txn_service_1 is running on port 81 on your localhost.  
 
 You can double check your configuration by running the following command: 
@@ -55,10 +55,10 @@ We are more concerned about the payload section which holds an array of Transact
 
 So make a copy of the text above, and save it to a file on your computer. 
 
-###Curl 
+## Curl 
 Curl is a command line tool for interacting with the Web. It is available on most computers and is installed by default on Macs, Windows and other Unix based computers like Linux.  To get a copy follow this link. [link](https://curl.haxx.se/download.html)
 
-##Posting Transactions
+## Posting Transactions
 To get started we are going to post the example json posted above, (it was saved with the file name of example.json)
 
 ```
@@ -78,7 +78,7 @@ Server: TornadoServer/4.2.1
 ```
 (note the string after the transaction_id will be different every time you post). 
 
-##Querying A Transaction 
+## Querying A Transaction 
 Dragonchain in its default configuration from the Docker image posts L1 transactions in 5 seconds. So after waiting a few moments, lets use curl to query the transaction we just posted. 
 
 We are going to use the transaction_id that we received when we posted a transaction in the previous section. 
@@ -150,5 +150,3 @@ curl http://localhost:80/transaction/?transaction_type=`DragonSwap` | jq '.'
 ```
 
 
-
-##

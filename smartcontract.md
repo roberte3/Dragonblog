@@ -1,3 +1,3 @@
-#Introduction to SmartContracts
+# Introduction to SmartContracts
 
 ## More to come

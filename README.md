@@ -1,6 +1,6 @@
 # Dragonchain Blog
 
-Some blog posts on Dragonchain from a developers point of view to help people get up and running on the sytem. 
+Some blog posts on Dragonchain from a developers point of view to help people get up and running on the system. 
 
 ## Table of Contents 
 1. Introduction 
@@ -15,5 +15,7 @@ Some blog posts on Dragonchain from a developers point of view to help people ge
     Using and listening to subscriptions [link](subscriptions.md)
 6. Multi-Node Dragonchain
     Using kubernetes, minikube and docker to setup L1-L4 nodes [link](k8.md)
-7. DragonClicker 
-    A node.js application based on cow-clicker that using a dragonchain backed virtual currency. 
+7. Publishing on Bitcoin
+    Sending information to the public blockchain from Dragonchain. 
+8. DragonClicker 
+    A node.js application based on cow-clicker that using a Dragonchain backed virtual currency. 
