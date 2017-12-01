@@ -8,6 +8,37 @@ So what is a Smart Contract? A smart contract is a computer program that runs on
 
 Lets get cracking on writing our first Dragonchain smart contract. 
 
+## Getting Started
+The Dragonchain team is working on multi-lingual smart contracts, aka Smart Contracts that you can write in a wide variaity of supported languages such as Javascript, C#,  The current public version on github only supports python so that is what we are going to use for this blog post. 
+
+There are several different types of Dragonchain smart contracts, but the most basic, is a Transaction Smart Contract (TSC). A TSC smart contract runs when a transaction is submitted to a L1 nodes such as the one we have setup in the previous demos.
+
+To get started we are going to say we have a business rule that we don't allow more than 100 Dragons to be traded in any group of transactions. To implement this we are going to write a simple Transaction Smart Contract. 
+
+````
+def func(self, txn):
+    strJson = json.dumps(txn) 
+    txnStructure = json.loads(strJson)
+    txnPayload = txnStructure['payload']['Transactions']
+
+    totalDragonsCount = 0 
+    for x in  range(len(txnPayload)): 
+        totalDragonsCount = totalDragonsCount + int(txnPayload[x]['numberOfDragons'])
+        if totalDragonsCount > 100: 
+            return False  
+    return True
+````
+
+So to get started we are package up this new TSC and get it running on Dragonchain when a Transaction of the type DragonSwap happens. 
+
+
+
+
+
+
+
+
+
 
 
 

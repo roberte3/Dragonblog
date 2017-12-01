@@ -5,7 +5,7 @@
     "family_of_business": "Test Business Family",
     "line_of_business": "My Business",
     "owner": "Test Node",
-    "transaction_type": "LOCATION_RECORD",
+    "transaction_type": "DragonSwap",
     "entity": "c78f4526-8683-11e6-b1c6-3c970e3bee11" 
   },
   "payload": {

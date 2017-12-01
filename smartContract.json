@@ -9,10 +9,10 @@
     "entity": "c78f4526-8683-11e6-b1c6-3c970e3bee11" 
   },
   "payload": {
-"Transactions":[
-    { "sender":"john@example.org", "numberOfDragons":"10", "receiver": "mike@example.org"},
-    { "sender":"bob@example.org", "numberOfDragons":"100", "receiver": "john@example.org"},
-    { "sender":"fred@example.org", "numberOfDragons":"5", "receiver": "john@example.org"}
-    ]}
+ "smart_contract": {
+   "implementation": "trusted",
+   "tsc": "def func(self, transaction): return False"
+ },
+ "version": 1
   
 }
