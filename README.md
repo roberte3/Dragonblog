@@ -4,7 +4,7 @@ Some blog posts on Dragonchain from a developers point of view to help people ge
 
 ## Table of Contents 
 1. Introduction 
-   An overview of Dragonchain and what is goals are.  [link](intro.md)
+   An overview of Dragonchain and what its goals are.  [link](intro.md)
 2. Docker 
    How to get the basic Dragonchain Docker image up and running. [link](docker.md)
 3. Transactions
@@ -18,4 +18,4 @@ Some blog posts on Dragonchain from a developers point of view to help people ge
 7. Publishing on Bitcoin
     Sending information to the public blockchain from Dragonchain. 
 8. DragonClicker 
-    A node.js application based on cow-clicker that using a Dragonchain backed virtual currency. 
+    A node.js application based on cow-clicker that uses a Dragonchain-backed virtual currency. 
