@@ -34,7 +34,7 @@ transaction.json
     "family_of_business": "Test Business Family",
     "line_of_business": "My Business",
     "owner": "Test Node",
-    "transaction_type": "DragonSwap",
+    "transaction_type": "TT_PROVISION_TSC",
     "entity": "c78f4526-8683-11e6-b1c6-3c970e3bee11"
   },
   "payload": {
@@ -101,7 +101,7 @@ Which should return something like this.
       "owner": "Test Node",
       "creator_id": null,
       "actor": "",
-      "transaction_type": "DragonSwap",
+      "transaction_type": "TT_PROVISION_TSC",
       "business_unit": "a3e13076-8683-11e6-97a9-3c970e3bee11",
       "transaction_id": "ff7a1cbd-b2db-4491-9e6b-3dd4d240291e",
       "transaction_ts": 1511734999
@@ -144,7 +144,7 @@ For example, if you wanted to see all of the transactions created by our owner "
 curl http://localhost:80/transaction/?owner=`Test Node` | jq '.'
 ```
 
-Likewise if you wanted all of the DragonSwap transactions
+Likewise if you wanted all of the transactions done by your business. 
 ```
-curl http://localhost:80/transaction/?transaction_type=`DragonSwap` | jq '.'
+curl http://localhost:80/transaction/?line_of_business=`My Business` | jq '.'
 ```
