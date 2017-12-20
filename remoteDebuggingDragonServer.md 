@@ -1,0 +1,79 @@
+# Remoting Debugging the Python Servers on Docker
+
+To easily debug the python servers via the Docker image make the following modifications. 
+
+For this we are going to use a tool called WDB (link)[https://github.com/Kozea/wdb] 
+
+Modify the docker-compose.yml file with the following 
+The important bits are the wdb: header 
+and 
+setting the environment for the service we wish to debug with 
+```
+version: '2'
+services:
+  db:
+    build:
+      dockerfile: docker/Postgres_Dockerfile
+      context: ../
+    ports:
+      - "5432:5432"
+
+  wdb: 
+    image: kozea/wdb-server
+    ports:
+      - "1984:1984"
+
+  query_svc:
+    build:
+      dockerfile: docker/Query_Dockerfile
+      context: ../
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    environment:
+      - BLOCKCHAIN_DB_HOSTNAME=db
+    volumes:
+      - keyvolume:/opt/dragonchain/pki
+
+  txn_service:
+    build:
+      dockerfile: docker/Transaction_Dockerfile
+      context: ../
+    links: 
+        - wdb
+    ports:
+      - "81:81"
+    depends_on:
+      - db
+      - wdb 
+    environment:
+      - WDB_SOCKET_SERVER = wdb
+      - WDB_NO_BROWSER_AUTO_OPEN = True
+      - BLOCKCHAIN_DB_HOSTNAME=db
+      
+    volumes:
+      - keyvolume:/opt/dragonchain/pki
+
+
+           
+  processor:
+    build:
+      dockerfile: docker/Processor_Dockerfile
+      context: ../
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - BLOCKCHAIN_DB_HOSTNAME=db
+    volumes:
+      - keyvolume:/opt/dragonchain/pki
+
+volumes:
+    keyvolume:
+        driver: local
+``` 
+
+
+
